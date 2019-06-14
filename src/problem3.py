@@ -264,7 +264,19 @@ def problem3b(m, point1):
     #    DIFFICULTY:      8 or 9
     #    TIME ESTIMATE:   20 to 30 minutes.
     # ------------------------------------------------------------------
+    window = rg.RoseWindow(400, 650)
+    window.render()
 
+    total = 0
+    x = point.x
+    y = point.y
+
+    for k in range(m):
+        point = rg.Point(x,y)
+        j = problem3a(window, point, (k * 2) + 3)
+
+        total = total * j
+    return total
 # ----------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
 # ----------------------------------------------------------------------
