@@ -146,7 +146,7 @@ def problem0a(n):
            since (2 + 4 + 6) is 12, which is NOT odd.
     """
     # ------------------------------------------------------------------
-    # TODO: 2. Implement and test this function.
+    # DONE: 2. Implement and test this function.
     #          Tests have been written for you (above).
     #
     ####################################################################
@@ -233,14 +233,12 @@ def problem0b(n):
     #    **  use (call) the   is_prime   function that is DEFINED ABOVE.
     ####################################################################
     # ------------------------------------------------------------------
-    sum = 0
-    for k in range(2,n+1):
-        if n % k == 0:
-            sum = sum
-        else:
-            sum = sum + 1
-    return (sum)
 
+    sum = 0
+    for k in range(n - 1):
+        if is_prime(k + 2):
+            sum = sum + 1
+    return sum
 
 def run_test_problem0c():
     """ Tests the   problem0c  function. """
