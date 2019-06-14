@@ -159,7 +159,7 @@ def problem1a(m, n):
       -- If m is 30 and n is 100, the correct answer is about 1.278.
     """
     # ------------------------------------------------------------------
-    # TODO: 3. Implement and test this function.
+    # DONE: 3. Implement and test this function.
     #   Note that you should write its TEST function first (above).
     # ------------------------------------------------------------------
     # ------------------------------------------------------------------
@@ -175,10 +175,11 @@ def problem1a(m, n):
 
     return total
 
+
 def run_test_problem1b():
     """ Tests the   problem1b   function. """
     # ------------------------------------------------------------------
-    # TODO: 4. Implement this TEST function.
+    # DONE: 4. Implement this TEST function.
     #   It TESTS the  problem1b  function defined below.
     #   Include at least **   4   ** tests.
     # ------------------------------------------------------------------
@@ -191,6 +192,34 @@ def run_test_problem1b():
     print('--------------------------------------------------')
     print('Testing the   problem1b   function:')
     print('--------------------------------------------------')
+
+    # Test 1:
+    expected = 5
+    answer = problem1b(3, 5)
+    print()
+    print('Test 1 expected:', expected)
+    print('       actual:  ', answer)
+
+    # Test 2:
+    expected = 22
+    answer = problem1b(7, 11)
+    print()
+    print('Test 2 expected:', expected)
+    print('       actual:  ', answer)
+
+    # Test 3:
+    expected = 12
+    answer = problem1b(2, 20)
+    print()
+    print('Test 3 expected:', expected)
+    print('       actual:  ', answer)
+
+    # Test 2:
+    expected = 4
+    answer = problem1b(1, 10)
+    print()
+    print('Test 3 expected:', expected)
+    print('       actual:  ', answer)
 
 
 def problem1b(m, f):
@@ -223,6 +252,14 @@ def problem1b(m, f):
     #    DIFFICULTY:      5
     #    TIME ESTIMATE:   10 to 15 minutes.
     # ------------------------------------------------------------------
+    n = m * f
+    total = 0
+    for k in range(m, n + 1):
+        if (n % k) == 0:
+            total = total
+        else:
+            total = total + 1
+    return total
 
 
 def run_test_problem1c():
