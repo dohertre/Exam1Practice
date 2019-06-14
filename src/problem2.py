@@ -102,7 +102,7 @@ def problem2a(circle, rectangle, window):
       :type window:    rg.RoseWindow
     """
     # ------------------------------------------------------------------
-    # TODO: 2. Implement and test this function.
+    # DONE: 2. Implement and test this function.
     #          Tests have been written for you (above).
     # ------------------------------------------------------------------
     # ------------------------------------------------------------------
@@ -118,7 +118,6 @@ def problem2a(circle, rectangle, window):
 
     c1 = rectangle.corner_1
     c2 = rectangle.corner_2
-
 
     line = rg.Line(c1, c2)
     line.attach_to(window)
@@ -200,6 +199,8 @@ def problem2b(rect, n, delta, win):
     #    DIFFICULTY:      7
     #    TIME ESTIMATE:   15 to 25 minutes.
     # ------------------------------------------------------------------
+    rectangle.attach_to(window)
+
 
 
 # ----------------------------------------------------------------------
