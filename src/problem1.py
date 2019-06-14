@@ -2,8 +2,8 @@
 PRACTICE Test 1, problem 1.
 
 Authors: David Mutchler, Valerie Galluzzi, Mark Hays, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and Rebekah Doherty.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 ########################################################################
 # Students:
@@ -25,6 +25,7 @@ Authors: David Mutchler, Valerie Galluzzi, Mark Hays, Amanda Stouder,
 #    on it, in class or via Piazza.
 ########################################################################
 
+import math
 
 def main():
     """ Calls the   TEST   functions in this module. """
@@ -92,7 +93,7 @@ def sum_of_digits(number):
 def run_test_problem1a():
     """ Tests the   problem1a   function. """
     # ------------------------------------------------------------------
-    # TODO: 2. Implement this TEST function.
+    # DONE: 2. Implement this TEST function.
     #   It TESTS the  problem1a  function defined below.
     #   Include at least **   4   ** tests (we wrote two for you).
     # ------------------------------------------------------------------
@@ -125,6 +126,20 @@ def run_test_problem1a():
     # Below this comment, add 2 more test cases of your own choosing.
     # ------------------------------------------------------------------
 
+    # Test 3:
+    expected = 1.955  # This is APPROXIMATELY the correct answer.
+    answer = problem1a(1, 3)
+    print()
+    print('Test 3 expected:', expected, '(approximately)')
+    print('       actual:  ', answer)
+
+    # Test 4:
+    expected = -0.5068  # This is APPROXIMATELY the correct answer.
+    answer = problem1a(10, 12)
+    print()
+    print('Test 4 expected:', expected, '(approximately)')
+    print('       actual:  ', answer)
+
 
 def problem1a(m, n):
     """
@@ -152,7 +167,13 @@ def problem1a(m, n):
     #    DIFFICULTY:      5
     #    TIME ESTIMATE:   10 minutes.
     # ------------------------------------------------------------------
+    total = 0
+    m = m ** 2
+    n = n ** 2
+    for k in range(m, n + 1):
+        total = total + math.sin(k)
 
+    return total
 
 def run_test_problem1b():
     """ Tests the   problem1b   function. """
