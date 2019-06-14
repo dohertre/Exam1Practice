@@ -233,6 +233,13 @@ def problem0b(n):
     #    **  use (call) the   is_prime   function that is DEFINED ABOVE.
     ####################################################################
     # ------------------------------------------------------------------
+    sum = 0
+    for k in range(2,n+1):
+        if n % k == 0:
+            sum = sum
+        else:
+            sum = sum + 1
+    return (sum)
 
 
 def run_test_problem0c():
