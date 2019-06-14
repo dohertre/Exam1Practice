@@ -201,8 +201,8 @@ def run_test_problem1b():
     print('       actual:  ', answer)
 
     # Test 2:
-    expected = 22
-    answer = problem1b(7, 11)
+    expected = 1
+    answer = problem1b(2, 1)
     print()
     print('Test 2 expected:', expected)
     print('       actual:  ', answer)
@@ -215,8 +215,8 @@ def run_test_problem1b():
     print('       actual:  ', answer)
 
     # Test 2:
-    expected = 4
-    answer = problem1b(1, 10)
+    expected = 44
+    answer = problem1b(5, 40)
     print()
     print('Test 3 expected:', expected)
     print('       actual:  ', answer)
@@ -255,9 +255,7 @@ def problem1b(m, f):
     n = m * f
     total = 0
     for k in range(m, n + 1):
-        if (n % k) == 0:
-            total = total
-        else:
+        if is_prime(k):
             total = total + 1
     return total
 
