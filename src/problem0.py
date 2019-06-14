@@ -305,7 +305,15 @@ def problem0c(circle, n, window):
     #   renders with a half-second pause after rendering.
     ####################################################################
     # ------------------------------------------------------------------
-
+    circle.attach_to(window)
+    center_x = circle.center.x + 2 * circle.radius
+    center_y = circle.center.y
+    for k in range(n):
+        center = rg.Point(center_x, center_y)
+        circleA = rg.Circle(center, circle.radius)
+        circleA.attach_to(window)
+        window.render(0.5)
+        center_x = center_x +(2 * circle.radius)
 
 # ----------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
