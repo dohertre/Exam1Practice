@@ -212,16 +212,16 @@ def problem2b(rect, n, delta, win):
     corner2_y = corner2.y
 
     for k in range(n):
+        corner1_x = corner1_x + (k * delta)
+        corner1_y = corner1_y + (k * delta)
+        corner2_x = corner2_x - (k * delta)
+        corner2_y = corner2_y - (k * delta)
+
         point1 = rg.Point(corner1_x, corner1_y)
         point2 = rg.Point(corner2_x, corner2_y)
+
         rect = rg.Rectangle(point1, point2)
-
         rect.attach_to(win)
-
-        corner1_x = corner1_x + (2 * delta)
-        corner1_y = corner1_y + (2 * delta)
-        corner2_x = corner2_x - (2 * delta)
-        corner2_y = corner2_y - (2 * delta)
 
     win.render()
 
