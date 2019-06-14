@@ -253,19 +253,14 @@ def problem1b(m, f):
     #    TIME ESTIMATE:   10 to 15 minutes.
     # ------------------------------------------------------------------
     n = m * f
-    # total = 0
-    # for k in range(m, n + 1):
-    #     if (n % k) == 0:
-    #         total = total
-    #     else:
-    #         total = total + 1
-    # return total
+    total = 0
+    for k in range(m, n + 1):
+        if (n % k) == 0:
+            total = total
+        else:
+            total = total + 1
+    return total
 
-    sum = 0
-    for k in range(m, n - 1):
-        if is_prime(k + 2):
-            sum = sum + 1
-    return sum
 
 def run_test_problem1c():
     """ Tests the   problem1c   function. """
