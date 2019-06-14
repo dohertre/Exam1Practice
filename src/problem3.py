@@ -2,8 +2,8 @@
 PRACTICE Test 1, problem 3.
 
 Authors: David Mutchler, Valerie Galluzzi, Mark Hays, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and Rebekah Doherty.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import rosegraphics as rg
 
@@ -162,24 +162,39 @@ def problem3a(window, point, n):
     pointx = point.x
     pointy = point.y
 
+    thickness = 1
+    count = 0
+
+    point1 = rg.Point(pointx, pointy)
+
     point2x = point.x
     point2y = point.y + 50
 
-    thickness = 1
+    point2 = rg.Point(point2x, point2y)
 
     for k in range(n):
-        point1 = rg.Point(pointx, pointy)
-        point2 = rg.Point(point2x, point2y)
         line = rg.Line(point, point2)
 
         line.attach_to(window)
 
         pointx = pointx + 20
-        pointy = pointy - 10
+        pointy = pointy + 10
+        point2x = point2x + 20
+        point2y = point2y + 10
+
+        point = rg.Point(pointx, pointy)
+        point2 = rg.Point(point2x, point2y)
 
         line.thickness = thickness
 
+        if thickness > 13:
+            thickness = 13
+
+        count = count + thickness
+        thickness = thickness + 2
+
     window.render()
+    return count
 
 
 def run_test_problem3b():
