@@ -239,7 +239,7 @@ def problem1b(m, f):
            since there are 44 primes between 5 and 200.
      """
     # ------------------------------------------------------------------
-    # TODO: 5. Implement and test this function.
+    # DONE: 5. Implement and test this function.
     #   Note that you should write its TEST function first (above).
     #
     ####################################################################
@@ -356,6 +356,12 @@ def problem1c(n):
     #    DIFFICULTY:      7
     #    TIME ESTIMATE:   15 to 20 minutes.
     # ------------------------------------------------------------------
+    total = 1
+    for k in range(2, n + 1):
+        if is_prime(k):
+            total = total * k
+            j = sum_of_digits(total)
+    return j
 
 
 # ----------------------------------------------------------------------
